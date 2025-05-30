@@ -1,16 +1,37 @@
+/* Colors */
+:root {
+  --sage-green: #9caf88; /* sage green shade */
+  --cream: #fdf6ec;
+  --tan: #e5dccc;
+  --light-brown: #8e7d6b;
+  --dark-brown: #5c4a3c;
+}
+
 /* Fonts */
 body {
   font-family: 'Quicksand', sans-serif;
-  background-color: #fdf6ec;
+  background-color: var(--cream);
   color: #3e3e3e;
   margin: 0;
   padding: 0;
   line-height: 1.6;
+
+  /* Add a subtle sage green gradient fade on left and right edges */
+  background-image: 
+    linear-gradient(to right, var(--sage-green) 0%, transparent 50%),
+    linear-gradient(to left, var(--sage-green) 0%, transparent 50%);
+  background-repeat: no-repeat;
+  background-position: left center, right center;
+  background-size: 20px 100%;
 }
 
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
-  color: #5c4a3c;
+  color: var(--dark-brown);
+  background-color: var(--sage-green);
+  padding: 5px 15px;
+  border-radius: 8px;
+  display: inline-block;
 }
 
 a {
@@ -36,7 +57,7 @@ header {
 
 .tagline {
   font-style: italic;
-  color: #8e7d6b;
+  color: var(--light-brown);
 }
 
 section {
@@ -55,10 +76,10 @@ section {
 
 .card {
   background-color: #ffffff;
-  border: 1px solid #e5dccc;
+  border: 1px solid var(--tan);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(156, 175, 136, 0.25); /* sage green shadow */
   width: 250px;
   text-align: center;
 }
@@ -70,3 +91,4 @@ footer {
   color: #aaa;
   background-color: #fffaf3;
 }
+
